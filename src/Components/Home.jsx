@@ -17,8 +17,6 @@ export const Home = () => {
   // }, []);
   // console.log(allData)
 
-  
-
   const [colorMode, setColorMode] = useState(false);
 
   const toggleColorMode = () => {
@@ -32,7 +30,6 @@ export const Home = () => {
           : " bg-white transition-all duration-500"
       } relative`}
     >
-      <AllNav />
       <Navigation toggleColorMode={toggleColorMode} colorMode={colorMode} />
 
       <Routes>
