@@ -1,49 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,500;0,700;1,100;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,500;0,700;1,100;1,400;1,700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300;600;700;800&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body,html,#root{
+body,
+html,
+#root {
   min-width: 100%;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
-.font{
-  font-family:Stick No Bills;
-  font-weight: 800;
-  letter-spacing: 1px;
-  font-size: 2rem;
+.font {
+  font-family: Stick No Bills;
 }
-.font2{
+.font2 {
   font-family: Source Code Pro;
-  color: #c0828f;
+  color: #e97e95;
   font-weight: 600;
 }
-.nav-hover{
-  background-color: #a88b91;
+.primary-color {
+  border: 1px solid #e97e95;
 }
-.menu-hover{
-  border: #a88b91 1px solid;
-  border-radius: 5px;
-
+.primary-color2 {
+  color: #e97e95;
 }
-
-.menu-hover:hover{
-  background-color: #c0828f;
-  color: rgb(253, 254, 255);
+.primary-color3 {
+  background-color: #e97e95;
 }
 
-
+.shadow {
+  box-shadow: 1px 0px 2px whitesmoke;
+}

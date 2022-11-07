@@ -1,9 +1,12 @@
-import { Hero } from "./Components/Hero";
-
-export default function App() {
+import React from "react";
+import { Home } from "./Components/Home";
+import {Route , Routes} from 'react-router-dom'
+export const App = () => {
   return (
     <div>
-      <Hero />
+      <Home /> 
+
+      
     </div>
   );
-}
+};
