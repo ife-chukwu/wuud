@@ -38,8 +38,8 @@ export const Home = () => {
         <Route path="/contact" element={<Contacts />} />
         <Route path="/favorite" element={<Favorites />} />
       </Routes>
-      {/* <div className="w-full h-20 flex items-center justify-center gap-20  bg-white"></div>
-    </div> */}
+      {/* <div className="w-full h-20 flex items-center justify-center gap-20  bg-white"></div> */}
+    </div>
     // <div className="text-black">
     //   {/* <h1 className="bg-black text-white">{allData.activity}</h1> */}
     // </div>
