@@ -4,23 +4,19 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { ImCancelCircle } from "react-icons/im";
 import { FaTimes } from "react-icons/fa";
 
-export const SearchArea = () => {
+export const SearchArea = ({ search, SearchHandler }) => {
   const [enterSearch, setEnterSearch] = useState("");
   const [displayWelcome, setDisplayWelcome] = useState(false);
-  const [search, setSearch] = useState(false);
 
   const display = () => {
     setDisplayWelcome(true);
   };
 
-  const SearchHandler = () => {
-    setSearch((prev) => !prev);
-  };
   const deleteButtonHandle = () => {
     setEnterSearch("");
   };
 
-  const searchHandler = (e) => {
+  const inputSearchHandler = (e) => {
     setEnterSearch(e.target.value);
   };
 
@@ -36,25 +32,26 @@ export const SearchArea = () => {
       </button>
       {search && (
         <div
-          className="absolute top-[40px] left-[-0]  flex bg-black/90 h-20 w-full items-center"
+          className="absolute top-[40px] left-[-0]  flex  w-full items-center bg-black/60 py-5 "
           data-aos="fade-down"
           data-aos-duration="700"
+          search={search}
         >
           <form onSubmit={formSubmitHandler}>
             <input
               type="text"
               name="search"
               placeholder="Search Here..."
-              className="relative outline-0 py-[16px] rounded-l-3xl text-lg  text-black ml-5  transition-transform duration-500 md:px-[150px] lg:px-[250px] xl:px-96 "
+              className=" mt-[-30px] outline-0 py-[8px] rounded-l-lg text-lg text-black ml-5  transition-transform duration-500 md:px-[150px] lg:px-[250px] xl:px-96 "
               value={enterSearch}
-              onChange={searchHandler}
+              onChange={inputSearchHandler}
             />
             <div className="absolute top-[31px] flex items-center ml-[950px] text-black/60 text-lg cursor-pointer">
               {enterSearch && <FaTimes onClick={deleteButtonHandle} />}
             </div>
             {
               <button
-                className=" absolute primary-color3 text-black/80 text-lg py-[15px] px-[95px] rounded-r-3xl  text-md font-bold primary-color md:px-[60px]"
+                className=" absolute bg-black text-white text-lg py-[8px] px-[95px] rounded-r-lg  text-md font-bold  md:px-[60px]  hover:ease-in-out hover:duration-500 hover:bg-black/80 mt-[-14px] hover:text-white/60"
                 onClick={display}
               >
                 Search
