@@ -1,8 +1,6 @@
 import React from "react";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import { useState } from "react";
-import { SearchArea } from "./SearchArea";
 import { FiSun } from "react-icons/fi";
 import { HiOutlineMoon } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -10,8 +8,6 @@ import { Link } from "react-router-dom";
 export const Navigation = ({
   toggleColorMode,
   colorMode,
-  search,
-  SearchHandler,
   menuHandler,
   sideNav,
 }) => {
@@ -22,7 +18,7 @@ export const Navigation = ({
           !colorMode
             ? "bg-black/60 transition-all duration-500"
             : "bg-black transition-all duration-500"
-        } items-center h-[40px] px-10 flex justify-between `}
+        } items-center h-[40px] px-5 flex justify-between`}
       >
         <Link to="/">
           <h1 className="text-[1.5rem] font-bold text-white/70 md:text-[2rem] font ">
@@ -61,16 +57,13 @@ export const Navigation = ({
             </Link>
             <Link to="/contact">
               {" "}
-              <li className="hover:border hover:px-3 hover:transition-width hover:duration-500 cursor-pointer ">
+              <li className="hover:border hover:px-3 hover:transition-width hover:duration-500 cursor-pointer">
                 Contact
               </li>
             </Link>
-            <div className="text-white md:p-5">
-              <SearchArea search={search} SearchHandler={SearchHandler} />
-            </div>
           </ul>
           <div
-            className=" text-xl text-white/70 flex items-center cursor-pointer  "
+            className=" text-xl text-white/70 flex items-center cursor-pointer md:pl-20 lg:pl-10"
             onClick={toggleColorMode}
           >
             {colorMode ? (
@@ -80,7 +73,7 @@ export const Navigation = ({
             )}
           </div>
           <div
-            className=" flex transition-all duration-500 font2 text-2xl items-center menu-hover hover:transition hover:duration-500 cursor-pointer pl-5 md:hidden"
+            className=" flex transition-all duration-500 font2 text-2xl items-center menu-hover hover:transition hover:duration-500 cursor-pointer pl-5 md:hidden text-white/60"
             onClick={menuHandler}
           >
             {sideNav ? (
@@ -96,7 +89,7 @@ export const Navigation = ({
 
       {sideNav && (
         <ul
-          className="text-white gap-5 bg-white/5 w-full z-30 absolute flex justify-center p-5  items-center flex-col font2 shadow  md:hidden"
+          className=" text-white gap-5  w-full z-30  flex justify-center p-5  items-center flex-col font2 shadow  md:hidden"
           data-aos="fade-down"
         >
           <Link to="/">

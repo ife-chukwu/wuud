@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
-import { ImCancelCircle } from "react-icons/im";
+import { MdClose } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
 
 export const SearchArea = ({ search, SearchHandler }) => {
@@ -9,7 +9,11 @@ export const SearchArea = ({ search, SearchHandler }) => {
   const [displayWelcome, setDisplayWelcome] = useState(false);
 
   const display = () => {
-    setDisplayWelcome(true);
+    if (enterSearch) {
+      setDisplayWelcome(true);
+    }else if(!enterSearch){
+      setDisplayWelcome(false)
+    }
   };
 
   const deleteButtonHandle = () => {
@@ -24,15 +28,15 @@ export const SearchArea = ({ search, SearchHandler }) => {
     event.preventDefault();
   };
   return (
-    <div>
-      <button onClick={SearchHandler}>
-        <div className="text-xl pl-10 pt-2 text-white/70">
-          {search ? <ImCancelCircle /> : <HiOutlineSearch />}
+    <div className=" flex justify-end mr-10 pt-2 items-center  lg:mr-5">
+      <div onClick={SearchHandler}>
+        <div className="text-xl bg-black/70  text-white py-3 px-10 rounded-xl cursor-pointer ">
+          {search ? <MdClose /> : <HiOutlineSearch />}
         </div>
-      </button>
+      </div>
       {search && (
         <div
-          className="absolute top-[40px] left-[-0]  flex  w-full items-center bg-black/60 py-5 "
+          className="absolute top-[20px] left-[-0]  flex  items-center"
           data-aos="fade-down"
           data-aos-duration="700"
           search={search}
@@ -46,12 +50,12 @@ export const SearchArea = ({ search, SearchHandler }) => {
               value={enterSearch}
               onChange={inputSearchHandler}
             />
-            <div className="absolute top-[31px] flex items-center ml-[950px] text-black/60 text-lg cursor-pointer">
+            <div className="absolute top-[4px] flex items-center ml-[950px] text-black/60 text-lg cursor-pointer">
               {enterSearch && <FaTimes onClick={deleteButtonHandle} />}
             </div>
             {
               <button
-                className=" absolute bg-black text-white text-lg py-[8px] px-[95px] rounded-r-lg  text-md font-bold  md:px-[60px]  hover:ease-in-out hover:duration-500 hover:bg-black/80 mt-[-14px] hover:text-white/60"
+                className=" absolute bg-black/90 text-white/70 text-lg py-[8px] px-[95px] rounded-r-lg  text-md font-bold  md:px-[60px]  hover:ease-in-out hover:duration-500 hover:bg-black mt-[-11px] "
                 onClick={display}
               >
                 Search

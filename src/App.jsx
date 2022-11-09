@@ -27,14 +27,14 @@ export const App = () => {
 
   return (
     <div
-      onClick={() => {
-        if (sideNav) {
-          setSideNav(false);
-        } else if (search) {
-          setSearch(false);
-        }
-      }}
-      className={`overflow-hidden h-screen w-full ${
+      // onClick={() => {
+      //   if (sideNav) {
+      //     setSideNav(false);
+      //   } else if (search) {
+      //     setSearch(false);
+      //   }
+      // }}
+      className={`overflow-hidden h-screen w-full relative ${
         !colorMode
           ? "bg-black transition-all duration-500"
           : " bg-white transition-all duration-500"
@@ -43,14 +43,15 @@ export const App = () => {
       <Navigation
         toggleColorMode={toggleColorMode}
         colorMode={colorMode}
-        search={search}
-        SearchHandler={SearchHandler}
         sideNav={sideNav}
         menuHandler={menuHandler}
       />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home search={search} SearchHandler={SearchHandler} />}
+        />
         <Route path="collection" element={<Collection />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contacts />} />
