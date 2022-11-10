@@ -92,8 +92,8 @@ export const Navigation = ({
           className=" text-white gap-5  w-full z-30  flex justify-center p-5  items-center flex-col font2 shadow  md:hidden"
           data-aos="fade-down"
         >
-          <Link to="/">
-            <li className="cursor-pointer  hover:ease-out hover:duration-700 bg-white/5  px-[300px] rounded-[40px] hover:bg-black/20 p-5">
+          <Link to="/" >
+            <li onClick={goAway} className="cursor-pointer  hover:ease-out hover:duration-700 bg-white/5  px-[300px] rounded-[40px] hover:bg-black/20 p-5">
               Home
             </li>
           </Link>
