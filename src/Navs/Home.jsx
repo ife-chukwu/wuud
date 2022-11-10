@@ -47,6 +47,7 @@ export const Home = () => {
                     placeholder="Enter Search..."
                     onChange={searchInputHandler}
                     value={search}
+                    name="name"
                     className="w-60  text-black  outline-none bg-red-50 md:w-80 h-8 relative rounded-l-md pl-5"
                   />
 
@@ -56,9 +57,12 @@ export const Home = () => {
                   >
                     <ImSearch />
                   </button>
-                  <div className=" cursor-pointer ml-[290px] mt-[-22px] absolute text-black/50">
+                  <div
+                    className=" cursor-pointer ml-[200px] md:ml-[290px] mt-[-22px] absolute text-black/50"
+                  
+                  >
                     {" "}
-                    <MdClose onClick={deleteSearch} />
+                    <MdClose   onClick={deleteSearch}/>
                   </div>
                 </form>
               </div>

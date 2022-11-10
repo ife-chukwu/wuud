@@ -10,48 +10,23 @@ import { Home } from "./Navs/Home";
 
 export const App = () => {
   const [colorMode, setColorMode] = useState(false);
-  const [search, setSearch] = useState(false);
-  const [sideNav, setSideNav] = useState(false);
 
   const toggleColorMode = () => {
     setColorMode((isCurrent) => !isCurrent);
   };
 
-  const SearchHandler = () => {
-    setSearch((prev) => !prev);
-  };
-
-  const menuHandler = () => {
-    setSideNav((currentSideNav) => !currentSideNav);
-  };
-
   return (
     <div
-      // onClick={() => {
-      //   if (sideNav) {
-      //     setSideNav(false);
-      //   } else if (search) {
-      //     setSearch(false);
-      //   }
-      // }}
       className={`overflow-hidden h-screen w-full relative ${
         !colorMode
           ? "bg-black transition-all duration-500"
           : " bg-white transition-all duration-500"
       }`}
     >
-      <Navigation
-        toggleColorMode={toggleColorMode}
-        colorMode={colorMode}
-        sideNav={sideNav}
-        menuHandler={menuHandler}
-      />
+      <Navigation toggleColorMode={toggleColorMode} colorMode={colorMode} />
 
       <Routes>
-        <Route
-          path="/"
-          element={<Home search={search} SearchHandler={SearchHandler} />}
-        />
+        <Route path="/" element={<Home />} />
         <Route path="collection" element={<Collection />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contacts />} />

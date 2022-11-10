@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { FiSun } from "react-icons/fi";
 import { HiOutlineMoon } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
-export const Navigation = ({
-  toggleColorMode,
-  colorMode,
-  menuHandler,
-  sideNav,
-}) => {
+export const Navigation = ({ toggleColorMode, colorMode }) => {
+  const [sideNav, setSideNav] = useState(false);
+
+  const menuHandler = () => {
+    setSideNav((currentSideNav) => !currentSideNav);
+  };
   return (
     <div className=" bg-white/5 backdrop-blur-md">
       <div
@@ -92,28 +92,28 @@ export const Navigation = ({
           className=" text-white gap-5  w-full z-30  flex justify-center p-5  items-center flex-col font2 shadow  md:hidden"
           data-aos="fade-down"
         >
-          <Link to="/" >
-            <li onClick={goAway} className="cursor-pointer  hover:ease-out hover:duration-700 bg-white/5  px-[300px] rounded-[40px] hover:bg-black/20 p-5">
+          <Link to="/">
+            <li className="cursor-pointer  hover:ease-out hover:duration-700 bg-white/5  px-[200px] rounded-[40px] hover:bg-black/20 p-5">
               Home
             </li>
           </Link>
           <Link to="collection">
-            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[270px] rounded-[40px] hover:bg-black/20  p-5">
+            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[170px] rounded-[40px] hover:bg-black/20  p-5">
               Collections
             </li>
           </Link>
           <Link to="favorite">
-            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[280px] rounded-[40px] hover:bg-black/20  p-5">
+            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[180px] rounded-[40px] hover:bg-black/20  p-5">
               Favorites
             </li>
           </Link>
           <Link to="about">
-            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[300px] rounded-[40px] hover:bg-black/20 p-5">
+            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[200px] rounded-[40px] hover:bg-black/20 p-5">
               About
             </li>
           </Link>
           <Link to="contact">
-            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[290px] rounded-[40px] hover:bg-black/20  p-5">
+            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[190px] rounded-[40px] hover:bg-black/20  p-5">
               Contact
             </li>
           </Link>
