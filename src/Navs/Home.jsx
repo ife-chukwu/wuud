@@ -56,12 +56,9 @@ export const Home = () => {
                   >
                     <ImSearch />
                   </button>
-                  <div
-                    className=" cursor-pointer ml-[290px] mt-[-22px] absolute text-black/50"
-                    onClick={deleteSearch}
-                  >
+                  <div className=" cursor-pointer ml-[290px] mt-[-22px] absolute text-black/50">
                     {" "}
-                    <MdClose />
+                    <MdClose onClick={deleteSearch} />
                   </div>
                 </form>
               </div>
