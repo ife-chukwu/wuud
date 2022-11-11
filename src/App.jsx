@@ -1,16 +1,25 @@
 import React from "react";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Navigation } from "./Components/Navs/Navigation";
-import { About } from "./Components/Navs/About";
-import { Collection } from "./Components/Navs/Collection";
-import { Favorites } from "./Components/Navs/Favorites";
-import { Contacts } from "./Components/Navs/Contacts";
-import { Home } from "./Components/Navs/Home";
+import { Navigation } from "./Navs/Navigation";
+import { About } from "./Navs/About";
+import { Collection } from "./Navs/Collection";
+import { Favorites } from "./Navs/Favorites";
+import { Contacts } from "./Navs/Contacts";
+import { Home } from "./Navs/Home";
 
 export const App = () => {
   const [colorMode, setColorMode] = useState(false);
+  const [sideNav, setSideNav] = useState(false);
 
+  const menuHandler = () => {
+    setSideNav((currentSideNav) => !currentSideNav);
+  };
+  const hideNav = () => {
+    if (sideNav) {
+      setSideNav(false);
+    }
+  };
   const toggleColorMode = () => {
     setColorMode((isCurrent) => !isCurrent);
   };
@@ -23,10 +32,17 @@ export const App = () => {
           : " bg-white transition-all duration-500"
       }`}
     >
-      <Navigation toggleColorMode={toggleColorMode} colorMode={colorMode} />
+      <Navigation
+        toggleColorMode={toggleColorMode}
+        colorMode={colorMode}
+        sideNav={sideNav}
+        menuHandler={menuHandler}
+        hideNav={hideNav}
+        setSideNav={setSideNav}
+      />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home sideNav={sideNav} />} />
         <Route path="collection" element={<Collection />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contacts />} />

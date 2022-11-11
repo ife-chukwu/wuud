@@ -5,17 +5,13 @@ import { FiSun } from "react-icons/fi";
 import { HiOutlineMoon } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
-export const Navigation = ({ toggleColorMode, colorMode }) => {
-  const [sideNav, setSideNav] = useState(false);
-
-  const menuHandler = () => {
-    setSideNav((currentSideNav) => !currentSideNav);
-  };
-  const hideNav = () => {
-    if (sideNav) {
-      setSideNav(false);
-    }
-  };
+export const Navigation = ({
+  toggleColorMode,
+  colorMode,
+  hideNav,
+  menuHandler,
+  sideNav,
+}) => {
   return (
     <div className=" bg-white/5 backdrop-blur-md">
       <div

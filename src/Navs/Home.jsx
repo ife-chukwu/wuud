@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { ImSearch } from "react-icons/im";
 import { MdClose } from "react-icons/md";
-import { SubHome } from "../SubHome";
+import { SubHome } from "../Components/SubHome";
 
-export const Home = () => {
+export const Home = ({ sideNav, setSideNav }) => {
   const [search, setSearch] = useState("");
   const [print, setPrint] = useState(false);
   const [displaySearch, setDisplaySearch] = useState(false);
@@ -13,6 +13,11 @@ export const Home = () => {
   };
   const showSearchArea = () => {
     setDisplaySearch((prev) => !prev);
+  };
+  const hideNavFromBackgroundImage = () => {
+    if (sideNav) {
+      setSideNav(false);
+    }
   };
 
   const deleteSearch = () => {
@@ -31,8 +36,8 @@ export const Home = () => {
     // }
   };
   return (
-    <div className="w-full h-full">
-      <div className="w-full h-[400px] ">
+    <div className="w-full h-screen overflow-auto">
+      <div className="w-full h-[400px] " onClick={hideNavFromBackgroundImage}>
         <div className="h-full w-full bg-[url('https://www.mondiniarredamenti.it/media/homepage/image/camaleonda-bebitalia1.jpg')] md:bg-center bg-cover ">
           {displaySearch && (
             <div
