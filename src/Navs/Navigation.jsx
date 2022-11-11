@@ -106,11 +106,11 @@ export const Navigation = ({ toggleColorMode, colorMode }) => {
           </Link>
 
           <li
-            className=" hover:ease-out hover:duration-700 bg-white/5  px-[130px] rounded-[40px] hover:bg-black/20  p-5 parent-link"
+            className=" hover:ease-out hover:duration-700 bg-white/5 relative px-[130px] rounded-[40px] hover:bg-black/20  p-5 parent-link"
             onClick={hideNav}
           >
             Collections
-            <ul className=" nested-lists absolute bg-white text-black poppins text-[14px] px-10">
+            <ul className=" nested-lists absolute bg-white text-black poppins text-[14px] px-10 w-full ml-[-130px]">
               <li className="cursor-pointer bg-black/10 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
                 Cabinets
               </li>
