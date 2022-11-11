@@ -34,14 +34,13 @@ export const Navigation = ({ toggleColorMode, colorMode }) => {
               </li>
             </Link>
             {/* <Link to="/collection"> */}{" "}
-            <li className=" hover:border hover:px-3 hover:transition-width hover:duration-500 cursor-pointer flex items-center relative">
+            <li className="  hover:px-3 hover:transition-width hover:duration-500 cursor-pointer flex items-center relative parent-link">
               Collections
-              <ul className=" nested-lists absolute">
+              <ul className=" nested-lists absolute bg-black text-white ">
                 <li>chair</li>
                 <li>chair</li>
                 <li>chair</li>
-                <li>chair</li>
-                <li>chair</li>
+                <li className=" text-sm">Foreign Kaki Couch</li>
               </ul>
             </li>
             {/* </Link> */}
