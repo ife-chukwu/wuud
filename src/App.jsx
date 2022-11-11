@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Navigation } from "./Navs/Navigation";
-import { About } from "./Navs/About";
-import { Collection } from "./Navs/Collection";
-import { Favorites } from "./Navs/Favorites";
-import { Contacts } from "./Navs/Contacts";
-import { Home } from "./Navs/Home";
+import { Navigation } from "./Components/Navs/Navigation";
+import { About } from "./Components/Navs/About";
+import { Collection } from "./Components/Navs/Collection";
+import { Favorites } from "./Components/Navs/Favorites";
+import { Contacts } from "./Components/Navs/Contacts";
+import { Home } from "./Components/Navs/Home";
 
 export const App = () => {
   const [colorMode, setColorMode] = useState(false);
