@@ -28,6 +28,10 @@ html,
   font-family: Source Code Pro;
   font-weight: 600;
 }
+.font3 {
+  font-family: poppins;
+  font-weight: 600;
+}
 .primary-color {
   border: 1px solid #e97e95;
 }

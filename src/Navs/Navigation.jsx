@@ -11,6 +11,11 @@ export const Navigation = ({ toggleColorMode, colorMode }) => {
   const menuHandler = () => {
     setSideNav((currentSideNav) => !currentSideNav);
   };
+  const hideNav = () => {
+    if (sideNav) {
+      setSideNav(false);
+    }
+  };
   return (
     <div className=" bg-white/5 backdrop-blur-md">
       <div
@@ -92,27 +97,58 @@ export const Navigation = ({ toggleColorMode, colorMode }) => {
           data-aos="fade-down"
         >
           <Link to="/">
-            <li className="cursor-pointer  hover:ease-out hover:duration-700 bg-white/5  px-[200px] rounded-[40px] hover:bg-black/20 p-5">
+            <li
+              className="cursor-pointer  hover:ease-out hover:duration-700 bg-white/5  px-[160px] rounded-[40px] hover:bg-black/20 p-5"
+              onClick={hideNav}
+            >
               Home
             </li>
           </Link>
-          <Link to="collection">
-            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[170px] rounded-[40px] hover:bg-black/20  p-5">
-              Collections
-            </li>
-          </Link>
+
+          <li
+            className=" hover:ease-out hover:duration-700 bg-white/5  px-[130px] rounded-[40px] hover:bg-black/20  p-5 parent-link"
+            onClick={hideNav}
+          >
+            Collections
+            <ul className=" nested-lists absolute bg-white text-black poppins text-[14px] px-10">
+              <li className="cursor-pointer bg-black/10 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
+                Cabinets
+              </li>
+              <Link to="collection">
+                <li className="cursor-pointer bg-black/10 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
+                  Glass Tables
+                </li>
+              </Link>
+              <li className="cursor-pointer bg-black/10 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
+                Stainless chairs
+              </li>
+              <li className="cursor-pointer bg-black/10 px-5 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
+                Foreign Kaki Couch
+              </li>
+            </ul>
+          </li>
+
           <Link to="favorite">
-            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[180px] rounded-[40px] hover:bg-black/20  p-5">
+            <li
+              className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[140px] rounded-[40px] hover:bg-black/20  p-5"
+              onClick={hideNav}
+            >
               Favorites
             </li>
           </Link>
           <Link to="about">
-            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[200px] rounded-[40px] hover:bg-black/20 p-5">
+            <li
+              className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[160px] rounded-[40px] hover:bg-black/20 p-5"
+              onClick={hideNav}
+            >
               About
             </li>
           </Link>
           <Link to="contact">
-            <li className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[190px] rounded-[40px] hover:bg-black/20  p-5">
+            <li
+              className="cursor-pointer hover:ease-out hover:duration-700 bg-white/5  px-[150px] rounded-[40px] hover:bg-black/20  p-5"
+              onClick={hideNav}
+            >
               Contact
             </li>
           </Link>
