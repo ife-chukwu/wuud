@@ -18,18 +18,18 @@ export const SubHome = () => {
             </h1>
 
             <div className="flex flex-col md:flex-row">
-              <figure className=" h-[300px] min-w-[300px] md:h-[280px] md:w-[350px] lg:w-[550px] lg:h-[450px] ">
+              <figure className=" h-[300px] w-[350px] md:h-[280px] md:w-[350px] lg:w-[550px] lg:h-[450px] ">
                 <img
                   src={item.img}
                   className="w-full h-full rounded-t-[20px] md:rounded-l-2xl md:rounded-r-none"
                 />
               </figure>
-              <div className="flex justify-center items-center bg-white/5 md:bg-transparent lg:border border-white/5 py-5 rounded-b-2xl md:rounded-r-2xl md:rounded-l-none h-[280px] lg:h-[450px] px-7">
+              <div className="flex justify-center w-[350px] items-center bg-white/5 md:bg-transparent lg:border border-white/5 py-40 rounded-b-2xl md:rounded-r-2xl md:rounded-l-none h-[280px] lg:h-[450px] px-7">
                 <div className="  flex-col">
                   <h1 className="text-white font-light text-xl pb-5 flex justify-center md:pb-2 md:pt-5 ">
                     {item.descriptionHeader}
                   </h1>
-                  <p className="text-white w-[368px] font-extralight text-sm lg:text-lg lg:w-[500px] pb-5 md:px-10 ">
+                  <p className="text-white w-[268px] font-extralight text-sm lg:text-lg lg:w-[500px] pb-5 md:px-10 ">
                     {item.description}
                   </p>
                 </div>
