@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -31,6 +32,10 @@ html,
 .font3 {
   font-family: poppins;
   font-weight: 600;
+}
+.font4 {
+  font-family: Quicksand;
+ 
 }
 .primary-color {
   border: 1px solid #e97e95;

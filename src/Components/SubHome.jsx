@@ -1,45 +1,43 @@
-import React, { useState, useEffect } from "react";
-import { AiFillLike } from "react-icons/ai";
-import { FaCommentDots } from "react-icons/fa";
+import React from "react";
+import DataBase from "./DataBase";
 
 export const SubHome = () => {
-  const [movies, setMovies] = useState([]);
-
-  const url = `https://pixabay.com/api/?key=31151137-4220319d62fd75cec00d9cc9c&q=yellow+flowers&image_type=photo&pretty=true`;
-  useEffect(() => {
-    fetch(url)
-      .then((imageData) => imageData.json())
-      .then((data) => setMovies(data.hits))
-      .catch((err) => console.error(err));
-  }, []);
-  console.log(movies);
+  console.log(DataBase);
   return (
-    <div className="h-screen w-full">
-      <div className=" flex flex-col mt-10 justify-center items-center w-full">
-        <h1 className="text-white font-extrabold text-2xl">Experiment</h1>
-        <div className="grid grid-cols-3 gap-5 p-10">
-          {movies.map(
-            (image) => (
-              <div>
-                <img src={image.largeImageURL} />
-                <div className="flex items-center gap-10 md:gap-20  lg:gap-40 pt-2">
-                  <p className="flex text-white gap-2">
-                    <AiFillLike className="text-xl text-red-600 " />
-                    {image.likes}
-                  </p>
+    <div className="h-screen w-full ">
+      <div className=" flex flex-col justify-center items-center w-full  mb-20">
+        <h1 className="text-white/90 font-thin  tracking-wider font-4 text-3xl  mt-10 border border-white/5 py-2   px-20 md:py-4 md:px-20 lg:text-5xl poppins">
+          What We Offer
+        </h1>
+      </div>
+      {DataBase.map((item) => (
+        <div className="w-full   justify-center flex">
+          <div className="flex flex-col">
+            <h1 className="text-white flex justify-center tracking-wider font-4 pb-10 pt-5 md:pt-10 md:pb-5">
+              {item.title}
+            </h1>
 
-                  <p className="text-white flex items-center gap-2">
-                    <FaCommentDots />
-                    {image.comments}
+            <div className="flex flex-col md:flex-row">
+              <figure className=" h-[300px] min-w-[300px] md:h-[280px] md:w-[350px] lg:w-[550px] lg:h-[450px] ">
+                <img
+                  src={item.img}
+                  className="w-full h-full rounded-t-[20px] md:rounded-l-2xl md:rounded-r-none"
+                />
+              </figure>
+              <div className="flex justify-center items-center bg-white/5 md:bg-transparent lg:border border-white/5 py-5 rounded-b-2xl md:rounded-r-2xl md:rounded-l-none h-[280px] lg:h-[450px] px-7">
+                <div className="  flex-col">
+                  <h1 className="text-white font-light text-xl pb-5 flex justify-center md:pb-2 md:pt-5 ">
+                    {item.descriptionHeader}
+                  </h1>
+                  <p className="text-white w-[368px] font-extralight text-sm lg:text-lg lg:w-[500px] pb-5 md:px-10 ">
+                    {item.description}
                   </p>
                 </div>
               </div>
-            )
-
-            //   <h1 className="text-white">{image.likes}</h1>;
-          )}
+            </div>
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };

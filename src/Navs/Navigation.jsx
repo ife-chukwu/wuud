@@ -108,7 +108,7 @@ export const Navigation = ({
             className={`cursor-pointer  hover:ease-out hover:duration-700 ${
               colorMode ? "bg-black/70" : "bg-white/5"
             }  px-[130px] rounded-[40px] hover:bg-black/20 p-5 parent-link relative`}
-            onClick={hideNav}
+          
           >
             Collections
             <ul
@@ -116,18 +116,18 @@ export const Navigation = ({
                 colorMode ? "bg-black text-white" : "bg-white text-black"
               } poppins text-[14px] px-10 w-full ml-[-130px]`}
             >
-              <li className="cursor-pointer bg-black/10 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
+              <li   onClick={hideNav} className="cursor-pointer bg-black/10 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
                 Cabinets
               </li>
               <Link to="collection">
-                <li className="cursor-pointer bg-black/10 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
+                <li    onClick={hideNav} className="cursor-pointer bg-black/10 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
                   Glass Tables
                 </li>
               </Link>
-              <li className="cursor-pointer bg-black/10 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
+              <li   onClick={hideNav} className="cursor-pointer bg-black/10 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
                 Stainless chairs
               </li>
-              <li className="cursor-pointer bg-black/10 px-5 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
+              <li   onClick={hideNav} className="cursor-pointer bg-black/10 px-5 hover:bg-black hover:text-white rounded-lg flex justify-center py-1 mt-1">
                 Foreign Kaki Couch
               </li>
             </ul>
