@@ -24,7 +24,7 @@ export const SubHome = () => {
                   className="w-full h-full rounded-t-[20px] md:rounded-l-2xl md:rounded-r-none"
                 />
               </figure>
-              <div className="flex justify-center w-[350px] items-center bg-white/5 md:bg-transparent lg:border border-white/5 py-40 mb-20  rounded-b-2xl md:rounded-r-2xl md:rounded-l-none h-[280px] lg:h-[450px] px-7">
+              <div className="flex justify-center w-[350px] items-center bg-white/10 md:bg-transparent lg:border border-white/5 py-40 mb-20  rounded-b-2xl md:rounded-r-2xl md:rounded-l-none h-[280px] lg:h-[450px] px-7">
                 <div className="  flex-col">
                   <h1 className="text-white font-light text-xl pt-20 pb-3 flex justify-center md:pb-2 md:pt-5 ">
                     {item.descriptionHeader}
@@ -35,6 +35,8 @@ export const SubHome = () => {
                 </div>
               </div>
             </div>
+
+            <hr />
           </div>
         </div>
       ))}

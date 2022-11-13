@@ -20,6 +20,7 @@ export const App = () => {
       setSideNav(false);
     }
   };
+  
   const toggleColorMode = () => {
     setColorMode((isCurrent) => !isCurrent);
   };
