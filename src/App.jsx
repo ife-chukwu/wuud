@@ -20,7 +20,7 @@ export const App = () => {
       setSideNav(false);
     }
   };
-  
+
   const toggleColorMode = () => {
     setColorMode((isCurrent) => !isCurrent);
   };
@@ -39,11 +39,10 @@ export const App = () => {
         sideNav={sideNav}
         menuHandler={menuHandler}
         hideNav={hideNav}
-        setSideNav={setSideNav}
       />
 
       <Routes>
-        <Route path="/" element={<Home sideNav={sideNav} />} />
+        <Route path="/" element={<Home colorMode={colorMode} />} />
         <Route path="collection" element={<Collection />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contacts />} />
