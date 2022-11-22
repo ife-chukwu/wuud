@@ -22,6 +22,7 @@ const informationStore = [
     descriptionHeader: "SIT OUT DINNING",
     description:
       "A thin backrest, folded like a sheet of paper and a light structure that holds the mattress: these are the main features of the Alys bed by B&B Italia. Gabriele and Oscar Buratti design Alys from the ground up: natural materials, simple, clean lines, design and comfort. This is how a bed made entirely of leather came into being: the headboard has a hint of a crease at the ends, as if to accommodate those who sleep on it, protecting them from any danger. The structure is really light to the eye a .",
+    review: "this is so great",
   },
   {
     id: 3,
@@ -30,6 +31,7 @@ const informationStore = [
     descriptionHeader: "ROUND FANCY TABLE",
     description:
       "A thin backrest, folded like a sheet of paper and a light structure that holds the mattress: these are the main features of the Alys bed by B&B Italia. Gabriele and Oscar Buratti design Alys from the ground up: natural materials, simple, clean lines, design and comfort. This is how a bed made entirely of leather came into being: the headboard has a hint of a crease at the ends, as if to accommodate those who sleep on it, protecting them from any danger. The structure is really light to the eye a .",
+    review: "this is so great",
   },
   {
     id: 4,
@@ -38,6 +40,7 @@ const informationStore = [
     descriptionHeader: "ALYS B&B ITALIA BED ",
     description:
       "A thin backrest, folded like a sheet of paper and a light structure that holds the mattress: these are the main features of the Alys bed by B&B Italia. Gabriele and Oscar Buratti design Alys from the ground up: natural materials, simple, clean lines, design and comfort. This is how a bed made entirely of leather came into being: the headboard has a hint of a crease at the ends, as if to accommodate those who sleep on it, protecting them from any danger. The structure is really light to the eye a .",
+    review: "this is so great",
   },
   {
     id: 5,

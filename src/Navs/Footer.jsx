@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import { Login } from "../Components/Form/Login";
 
 export const Footer = () => {
   return (
-    <div className='w-full h-[200px] bg-black text-white'><h1>fuck you bro</h1></div>
-  )
-}
+    <div className="w-full h-[200px] bg-black text-white">
+      <Login />
+    </div>
+  );
+};

@@ -10,17 +10,8 @@ import { Home } from "./Navs/Home";
 
 export const App = () => {
   const [colorMode, setColorMode] = useState(false);
-  const [sideNav, setSideNav] = useState(false);
 
-  const menuHandler = () => {
-    setSideNav((currentSideNav) => !currentSideNav);
-  };
-  const hideNav = () => {
-    if (sideNav) {
-      setSideNav(false);
-    }
-  };
-
+ 
   const toggleColorMode = () => {
     setColorMode((isCurrent) => !isCurrent);
   };
@@ -36,9 +27,8 @@ export const App = () => {
       <Navigation
         toggleColorMode={toggleColorMode}
         colorMode={colorMode}
-        sideNav={sideNav}
-        menuHandler={menuHandler}
-        hideNav={hideNav}
+       
+        
       />
 
       <Routes>
