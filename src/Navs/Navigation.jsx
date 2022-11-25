@@ -4,11 +4,12 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FiSun } from "react-icons/fi";
 import { HiOutlineMoon } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { SearchArea } from "./SearchArea";
 import { myContext } from "./ParentContext";
+import { ImSearch } from "react-icons/im";
+import { MdClose } from "react-icons/md";
 
 export const Navigation = ({ toggleColorMode, colorMode }) => {
-  const { menuHandler, hideNav, sideNav, HideSearchFromSideNav } =
+  const { menuHandler, hideNav, sideNav, displaySearch, showSearchArea } =
     useContext(myContext);
   return (
     <div className=" bg-white/5 backdrop-blur-md">
@@ -25,7 +26,7 @@ export const Navigation = ({ toggleColorMode, colorMode }) => {
           </h1>
         </Link>
         <div className="flex justify-evenly">
-          <ul className="hidden md:flex md:text-[13px] md:gap-5 lg:gap-7 lg:mr-10 xl:mr-20  font2 text-white/80 md:items-center">
+          <ul className="hidden md:flex md:text-[13px] md:gap-5 lg:gap-7 font2 text-white/80 md:items-center">
             <Link to="/">
               {" "}
               <li className="hover:border hover:px-3 hover:transition-width hover:duration-500 cursor-pointer ">
@@ -33,7 +34,7 @@ export const Navigation = ({ toggleColorMode, colorMode }) => {
               </li>
             </Link>
             {/* <Link to="/collection"> */}{" "}
-            <li className="  hover:px-3 hover:transition-width hover:duration-500 cursor-pointer flex items-center relative parent-link">
+            <li className="  hover:px-3 hover:transition-width hover:duration-500 cursor-pointer flex items-center relative parent-link ">
               Collections
               <ul className=" nested-lists absolute bg-black text-white ">
                 <li>chair</li>
@@ -61,6 +62,23 @@ export const Navigation = ({ toggleColorMode, colorMode }) => {
             </Link>
           </ul>
           <div
+            onClick={showSearchArea}
+            className="px-10 cursor-pointer flex items-center"
+          >
+            {displaySearch ? (
+              <h1 className="text-white text-xl">
+                {" "}
+                <MdClose />
+              </h1>
+            ) : (
+              <h1 className="text-white md:text-lg">
+                {" "}
+                <ImSearch />
+              </h1>
+            )}
+          </div>
+
+          <div
             className=" text-xl text-white/70 flex items-center cursor-pointer md:pl-20 lg:pl-10"
             onClick={toggleColorMode}
           >
@@ -71,7 +89,6 @@ export const Navigation = ({ toggleColorMode, colorMode }) => {
             )}
           </div>
 
-          <SearchArea />
           <div
             className=" flex transition-all duration-500 font2 text-2xl items-center menu-hover hover:transition hover:duration-500 cursor-pointer pl-5 md:hidden text-white/60"
             onClick={menuHandler}
@@ -89,7 +106,6 @@ export const Navigation = ({ toggleColorMode, colorMode }) => {
 
       {sideNav && (
         <ul
-          onClick={HideSearchFromSideNav}
           className=" 
           text-white gap-5  w-full z-30  flex justify-center p-5  items-center flex-col font2   md:hidden"
           data-aos="fade-down"

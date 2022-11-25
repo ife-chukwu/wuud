@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import DataBase from "./DataBase";
 import { CustomersReviews } from "./CustomersReviews";
+import { myContext } from "../Navs/ParentContext";
 
 export const SubHome = ({ colorMode }) => {
+  const { hideSearch } = useContext(myContext);
+
+ 
   return (
-    <div className="h-screen w-full ">
+    <div className="h-screen w-full " >
       <div className=" flex flex-col justify-center items-center w-full  mb-3">
         <h1
           className={`${
@@ -39,7 +43,7 @@ export const SubHome = ({ colorMode }) => {
                   !colorMode
                     ? "bg-white/10 lg:border-white/5  md:bg-transparent"
                     : "bg-black text-white "
-                } md:border-t lg:border  lg:w-[500px]  py-40 mb-20  rounded-b-2xl md:rounded-r-2xl md:rounded-l-none h-[280px] lg:h-[450px] px-7 md:h-[380px] md:w-[390px]`}
+                } md:border-t border-white/10 lg:border  lg:w-[500px]  py-40 mb-20  rounded-b-2xl md:rounded-r-2xl md:rounded-l-none h-[280px] lg:h-[450px] px-7 md:h-[380px] md:w-[390px]`}
               >
                 <div className="  flex-col">
                   <h1 className="text-white font-light text-xl  pb-3 flex justify-center md:pb-2 mt-20 ">
@@ -56,7 +60,7 @@ export const SubHome = ({ colorMode }) => {
           </div>
         </div>
       ))}
-      <CustomersReviews />
+      <CustomersReviews colorMode={colorMode} />
     </div>
   );
 };

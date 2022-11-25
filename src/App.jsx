@@ -8,10 +8,10 @@ import { Favorites } from "./Navs/Favorites";
 import { Contacts } from "./Navs/Contacts";
 import { Home } from "./Navs/Home";
 
+
 export const App = () => {
   const [colorMode, setColorMode] = useState(false);
 
- 
   const toggleColorMode = () => {
     setColorMode((isCurrent) => !isCurrent);
   };
@@ -21,15 +21,10 @@ export const App = () => {
       className={`overflow-hidden h-screen w-full relative ${
         !colorMode
           ? "bg-black transition-all duration-500"
-          : " bg-white transition-all duration-500"
+          : " bg-black/10 transition-all duration-500"
       }`}
     >
-      <Navigation
-        toggleColorMode={toggleColorMode}
-        colorMode={colorMode}
-       
-        
-      />
+      <Navigation toggleColorMode={toggleColorMode} colorMode={colorMode} />
 
       <Routes>
         <Route path="/" element={<Home colorMode={colorMode} />} />
