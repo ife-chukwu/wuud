@@ -8,9 +8,6 @@ module.exports = {
     
     extend: {
 
-      backgroundImage:{
-        'hero-background':'url("https://www.mondiniarredamenti.it/media/homepage/image/prova-divano-pc.jpg")'
-      }
     },
   },
   plugins: [],

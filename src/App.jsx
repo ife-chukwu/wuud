@@ -1,38 +1,27 @@
 import React from "react";
-import { useState } from "react";
+import { NavArea } from "./Components/NavArea";
 import { Route, Routes } from "react-router-dom";
-import { Navigation } from "./Navs/Navigation";
-import { About } from "./Navs/About";
-import { Collection } from "./Navs/Collection";
-import { Favorites } from "./Navs/Favorites";
-import { Contacts } from "./Navs/Contacts";
-import { Home } from "./Navs/Home";
+import { Home } from "./Components/MyPages/Home";
+import { About } from "./Components/MyPages/About";
+import { Contact } from "./Components/MyPages/Contact";
+import { Categories } from "./Components/MyPages/Categories";
+import { Products } from "./Components/MyPages/Products";
 
-
-export const App = () => {
-  const [colorMode, setColorMode] = useState(false);
-
-  const toggleColorMode = () => {
-    setColorMode((isCurrent) => !isCurrent);
-  };
-
+const App = () => {
   return (
-    <div
-      className={`overflow-hidden h-screen w-full relative ${
-        !colorMode
-          ? "bg-black transition-all duration-500"
-          : " bg-black/10 transition-all duration-500"
-      }`}
-    >
-      <Navigation toggleColorMode={toggleColorMode} colorMode={colorMode} />
-
-      <Routes>
-        <Route path="/" element={<Home colorMode={colorMode} />} />
-        <Route path="collection" element={<Collection />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contacts />} />
-        <Route path="favorite" element={<Favorites />} />
-      </Routes>
+    <div className="overflow-hidden">
+      <NavArea />
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="categories" element={<Categories />} />
+          <Route path="products" element={<Products />} />
+        </Routes>
+      </div>
     </div>
   );
 };
+
+export default App;

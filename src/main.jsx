@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { App } from "./App";
+import App from "./App";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import { ParentContext } from "./Navs/ParentContext";
+import { MyContextApi } from "./Components/MyUseContext/MyContextApi";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ParentContext>
+  <MyContextApi>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </ParentContext>
+  </MyContextApi>
 );
