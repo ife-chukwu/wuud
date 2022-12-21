@@ -5,6 +5,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { HiOutlineSearch } from "react-icons/hi";
 import { SignIn } from "./Form/SignIn";
 import {GiHamburgerMenu} from "react-icons/gi"
+import {BiArrowBack} from "react-icons/bi"
 
 export const NavArea = () => {
   const { showSearchArea, showSearch, cancelSearchArea } =
@@ -145,7 +146,7 @@ export const NavArea = () => {
                 <section
                   className={`absolute ${
                     signIn
-                      ? "  w-full h-full flex justify-center items-center mt-10 mb-20"
+                      ? "  w-full h-full flex justify-center items-center "
                       : "hidden"
                   }  `}
                 >
@@ -164,7 +165,7 @@ export const NavArea = () => {
                     onClick={signInHandler}
                     className="z-40 bg-orange-600 py-2 px-10 rounded-2xl shadow-lg shadow-black/20 text-black/70 hover:bg-black/5 cursor-pointer text-sm hover:duration-500 transition font-semibold"
                   >
-                    {signIn ? "Back" : "Sign In"}
+                    {signIn ? <BiArrowBack className="text-xl text-black/60 "/> : "Sign In"}
                   </button>
 
                   <div className="flex items-flex relative">

@@ -38,10 +38,10 @@ export const SignIn = () => {
     }
   };
   return (
-    <div>
+    <div className="w-full h-full">
       <form
         onSubmit={handleSubmit}
-        className="border border-white/20 w-full h-full flex flex-col gap-8 px-[50px] py-20 rounded-lg"
+        className=" w-full items-center  flex flex-col gap-8   rounded-lg"
       >
         <input
           type="email"
@@ -52,7 +52,7 @@ export const SignIn = () => {
           onChange={singInInputHandler}
         />
 
-        <p className="absolute mt-10 ml-5 gap-5 text-[#d32222]">{error}</p>
+        <p className="absolute mt-10  gap-5 text-[12px] text-[#d32222]">{error}</p>
         <input
           type="password"
           name="password"
@@ -61,9 +61,7 @@ export const SignIn = () => {
           className="outline-none w-80 h-10 rounded-md px-5"
           onChange={singInInputHandler}
         />
-        <p className="absolute mt-[120px] ml-5 gap-5 text-[#d32222]">
-          {error2}
-        </p>
+        <p className="absolute mt-[120px] text-[12px] gap-5 text-[#d32222]">{error2}</p>
 
         <div className="flex justify-center mt-5">
           <button
