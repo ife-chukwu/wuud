@@ -106,8 +106,8 @@ export const Home = () => {
           </div>
 
           <div className="flex flex-col justify-center h-full items-center">
-            <div className="absolute ">
-              <div className=" flex flex-col justify-center h-full items-center bg-black/30 py-[50px]  md:py-[100px] px-[50px] md:px-80 rounded-lg">
+            <div className="absolute mt-[-400px]">
+              <div className=" flex flex-col justify-center h-full items-center bg-black/30 py-[50px]  md:py-[100px] px-[40px] md:px-80 rounded-lg">
                 <h1 className="text-white text3 tracking-wide  font-bold text-3xl md:text-5xl  leading-[40px] md:leading-[60px] text-center">
                   Design Your Dream
                   <br />
