@@ -146,7 +146,7 @@ export const NavArea = () => {
                 <section
                   className={`absolute ${
                     signIn
-                      ? "  w-full h-full flex justify-center items-center "
+                      ? "  w-full h-full flex justify-center mt-40 "
                       : "hidden"
                   }  `}
                 >

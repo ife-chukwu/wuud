@@ -91,13 +91,13 @@ export const Home = () => {
           <div className="absolute w-full h-full">
             <div className="flex justify-between mt-[-300px]">
               <div
-                className="text-3xl ml-5 md:ml-10 text-white bg-black/50 rounded-full p-2  "
+                className="md:text-3xl ml-5 md:ml-10 text-white bg-black/50 rounded-full p-2  "
                 onClick={goToPrev}
               >
                 <AiFillCaretLeft />
               </div>
               <div
-                className="text-3xl mr-5 md:mr-10 text-white  bg-black/50 rounded-full p-2"
+                className="md:text-3xl mr-5 md:mr-10 text-white  bg-black/50 rounded-full p-2"
                 onClick={goToNext}
               >
                 <AiFillCaretRight />
@@ -106,8 +106,8 @@ export const Home = () => {
           </div>
 
           <div className="flex flex-col justify-center h-full items-center">
-            <div className="absolute mt-[-400px]">
-              <div className=" flex flex-col justify-center h-full items-center bg-black/30 py-[50px]  md:py-[100px] px-[40px] md:px-80 rounded-lg">
+            <div className="absolute mt-[-450px]">
+              <div className=" flex flex-col justify-center h-full items-center bg-black/30 py-[50px]  md:py-[100px] px-[40px] md:px-60 rounded-lg">
                 <h1 className="text-white text3 tracking-wide  font-bold text-3xl md:text-5xl  leading-[40px] md:leading-[60px] text-center">
                   Design Your Dream
                   <br />
@@ -128,29 +128,29 @@ export const Home = () => {
         </div>
         <div className="flex justify-center mt-[-30px] mb-40">
           <div className="border rounded-2xl flex py-2  md:px-5 bg-[#f5f5f5] shadow-lg shadow-black/40 absolute">
-            <div className="border-r-[3px]  border-gray-400 flex items-center px-5 md:px-10">
-              <span className="mr-2 text-orange-500 font-bold text-[1.8rem] md:text-[3rem] text2">
+            <div className="border-r-[3px]  border-gray-400 flex items-center px-2 md:px-10">
+              <span className="md:mr-2 text-orange-500 font-bold text-[1.6rem] md:text-[3rem] text2">
                 10+
               </span>
-              <p className="leading-4 text-gray-500 font-semibold font2  text-[13px] md:text-lg">
+              <p className="leading-4 text-gray-500 font-semibold font2  text-[12px] md:text-lg">
                 Years <br />
                 Experience
               </p>
             </div>
-            <div className="border-r-[3px]  border-gray-400  flex items-center px-5 md:px-10">
-              <span className="mr-2  text-orange-500 font-bold text-[1.8rem] md:text-[3rem] text2">
+            <div className="border-r-[3px]  border-gray-400  flex items-center px-2 md:px-10">
+              <span className="mr-2  text-orange-500 font-bold text-[1.6rem] md:text-[3rem] text2">
                 20k+
               </span>
-              <p className="leading-4 text-gray-500 font-semibold text-[13px] font2 md:text-lg">
+              <p className="leading-4 text-gray-500 font-semibold text-[12px] font2 md:text-lg">
                 Best <br />
                 Product
               </p>
             </div>
-            <div className=" flex items-center px-5 md:px-10">
+            <div className=" flex items-center px-2 md:px-10">
               <span className="mr-3 text-orange-500 font-bold text-[1.8rem] md:text-[3rem] text2">
                 15k
               </span>
-              <p className="leading-4 text-gray-500 font-semibold font2 text-[13px] md:text-lg">
+              <p className="leading-4 text-gray-500 font-semibold font2 text-[12px] md:text-lg">
                 Happy <br />
                 Customers
               </p>
