@@ -82,7 +82,7 @@ export const Home = () => {
               className={index === currentIndex ? "slide current" : "slide "}
             >
               {index === currentIndex && (
-                <figure className="w-full h-[550px]">
+                <figure className="w-full h-[400px] md:h-[550px]">
                   <img src={slide.url} className="w-full h-full" />
                 </figure>
               )}
