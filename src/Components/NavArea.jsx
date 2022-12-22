@@ -4,17 +4,25 @@ import { myContext } from "./MyUseContext/MyContextApi";
 import { MdOutlineClose } from "react-icons/md";
 import { HiOutlineSearch } from "react-icons/hi";
 import { SignIn } from "./Form/SignIn";
-import {GiHamburgerMenu} from "react-icons/gi"
-import {BiArrowBack} from "react-icons/bi"
+import { GiHamburgerMenu } from "react-icons/gi";
+import { BiArrowBack } from "react-icons/bi";
+import { SignUp } from "./Form/SignUp";
 
 export const NavArea = () => {
   const { showSearchArea, showSearch, cancelSearchArea } =
     useContext(myContext);
   const [showNav, setShowNav] = useState(false);
   const [signIn, setSignIn] = useState(false);
+  const [signUp, setSignUp] = useState(false);
 
   const displayNav = () => {
     setShowNav((prev) => !prev);
+  };
+  const signUpHandler = () => {
+    setSignUp((prev) => !prev);
+    if (signUp) {
+      setSignIn(false);
+    }
   };
 
   const closeNav = () => {
@@ -41,7 +49,7 @@ export const NavArea = () => {
               </span>
             </h1>
             <button onClick={displayNav} className="md:hidden">
-              <GiHamburgerMenu className="text-2xl text-orange-500  "/>
+              <GiHamburgerMenu className="text-2xl text-orange-500  " />
             </button>
           </div>
 
@@ -96,8 +104,12 @@ export const NavArea = () => {
                   signIn ? "mt-[0]" : "mt-0"
                 }   md:hidden relative transition-all duration-1000`}
               >
-                <div className={signIn ? "hidden" : "flex justify-center"}>
-                  <ul className="flex flex-col gap-5 text-center text-xl absolute text-white mt-[120px] md:hidden ">
+                <div
+                  className={
+                    signIn || signUp ? "hidden" : "flex justify-center"
+                  }
+                >
+                  <ul className="flex flex-col gap-5 text-center text-xl absolute text-white mt-[180px] md:hidden ">
                     <Link to="/">
                       <li
                         onClick={closeNav}
@@ -143,10 +155,11 @@ export const NavArea = () => {
                     </Link>
                   </ul>
                 </div>
+
                 <section
                   className={`absolute ${
                     signIn
-                      ? "  w-full h-full flex justify-center mt-40 "
+                      ? "w-full h-full flex justify-center mt-40 "
                       : "hidden"
                   }  `}
                 >
@@ -154,6 +167,17 @@ export const NavArea = () => {
                     <SignIn />
                   </div>
                 </section>
+
+                <section
+                  className={`absolute ${
+                    signUp
+                      ? "  w-full h-full flex justify-center mt-40 "
+                      : "hidden"
+                  }  `}
+                >
+                  <SignUp />
+                </section>
+
                 <div
                   className={`${
                     signIn
@@ -161,20 +185,31 @@ export const NavArea = () => {
                       : " flex justify-between ml-5 pt-10 mr-5 gap-5"
                   }`}
                 >
-                  <button
-                    onClick={signInHandler}
-                    className="z-40 bg-orange-600 py-2 px-10 rounded-2xl shadow-lg shadow-black/20 text-black/70 hover:bg-black/5 cursor-pointer text-sm hover:duration-500 transition font-semibold"
-                  >
-                    {signIn ? <BiArrowBack className="text-xl text-black/60 "/> : "Sign In"}
-                  </button>
-
-                  <div className="flex items-flex relative">
-                    <button onClick={showSearchArea}>
-                      <HiOutlineSearch className="  mt-[-7px] text-white  -ml-10 text-black/70 absolute text-2xl" />
+                  <div className={signUp ? "-z-40" : ""}>
+                    {" "}
+                    <button
+                      onClick={signInHandler}
+                      className="z-40 bg-orange-600 py-2 px-10 rounded-2xl shadow-lg shadow-black/20 text-black/70 hover:bg-black/5 cursor-pointer text-sm hover:duration-500 transition font-semibold"
+                    >
+                      {signIn ? (
+                        <BiArrowBack className="text-xl text-black/60 " />
+                      ) : (
+                        "Sign In"
+                      )}
                     </button>
-                    <button className=" bg-white py-2 px-10 rounded-2xl shadow-md shadow-black/20 text-black/70 hover:bg-black/5 cursor-pointer text-sm hover:duration-500 transition font-semibold">
-                      Sign Up
-                    </button>
+                  </div>
+                  <div className={signIn ? "-z-40" : ""}>
+                    <div className="flex items-flex relative">
+                      <button onClick={showSearchArea}>
+                        <HiOutlineSearch className="  mt-[-7px] text-white  -ml-10 text-black/70 absolute text-2xl" />
+                      </button>
+                      <button
+                        onClick={signUpHandler}
+                        className=" bg-white py-2 px-10 rounded-2xl shadow-md shadow-black/20 text-black/70 hover:bg-black/5 cursor-pointer text-sm hover:duration-500 transition font-semibold"
+                      >
+                        Sign Up
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

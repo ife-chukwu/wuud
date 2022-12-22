@@ -147,7 +147,7 @@ export const Home = () => {
               </p>
             </div>
             <div className=" flex items-center px-2 md:px-10">
-              <span className="mr-3 text-orange-500 font-bold text-[1.8rem] md:text-[3rem] text2">
+              <span className="mr-3 text-orange-500 font-bold text-[1.6rem] md:text-[3rem] text2">
                 15k
               </span>
               <p className="leading-4 text-gray-500 font-semibold font2 text-[12px] md:text-lg">

@@ -29,7 +29,7 @@ export const SignIn = () => {
     }
 
     if (input.Email.trim() === "") {
-      setError("Incorrect email");
+      setError("Enter email");
     }
     if (input.password.trim() === "") {
       setError2("Enter password");
