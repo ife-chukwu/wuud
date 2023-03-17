@@ -43,22 +43,20 @@ html,
   left: 0;
   top: 0;
   opacity: 0;
-  transform: translateX(-50%);
-  transition: all 1.5s ease;
-}
-.nav-state {
-  left: 0;
-  top: 0;
-  opacity: 1;
   transform: translateX(-100%);
-  transition: all 1.5s ease;
+  transition: all 1s ease;
 }
 
-.nav-slide {
-  opacity: 1;
-  transform: translateX(0);
-}
 .current {
   opacity: 1;
   transform: translateX(0);
+}
+
+.parent-nav:hover .child-nav {
+  display: block;
+}
+
+.child-nav {
+  position: absolute;
+  display: none;
 }

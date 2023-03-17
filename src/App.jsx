@@ -6,20 +6,25 @@ import { About } from "./Components/MyPages/About";
 import { Contact } from "./Components/MyPages/Contact";
 import { Categories } from "./Components/MyPages/Categories";
 import { Products } from "./Components/MyPages/Products";
+import { DisplayDetails } from "./Components/MyPages/DisplayDetails";
+import { Footer } from "./Components/MyPages/Footer";
 
 const App = () => {
   return (
-    <div className="overflow-hidden">
+    <div>
       <NavArea />
-      <div>
+
+      <div className="overflow-x-hidden">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="categories" element={<Categories />} />
           <Route path="products" element={<Products />} />
+          <Route path="/:details" element={<DisplayDetails />}></Route>
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 };
