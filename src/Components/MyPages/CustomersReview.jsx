@@ -13,56 +13,56 @@ export const CustomersReview = () => {
         "Having beautiful furniture in your home is not about modernity or sophistication or cult. It ia very much a necessity for a healthy outlook to your own life... #ULstory #Happysouls",
     },
     {
-      id: "1",
+      id: "2",
       img: "Images/CustomersInfo/img2.jpg",
       customerName: "Alexandra Book Shelf",
       customerComment:
         "having beautiful furniture in your home is not about modernity or sophistication or cult. It ia very much a necessity for a healthy outlook to your own life... #ULstory #Happysouls",
     },
     {
-      id: "2",
+      id: "3",
       img: "Images/CustomersInfo/img3.jpg",
       customerName: "Alexandra Book Shelf",
       customerComment:
         "having beautiful furniture in your home is not about modernity or sophistication or cult. It ia very much a necessity for a healthy outlook to your own life... #ULstory #Happysouls",
     },
     {
-      id: "1",
+      id: "4",
       img: "Images/CustomersInfo/img3.jpg",
       customerName: "Alexandra Book Shelf",
       customerComment:
         "having beautiful furniture in your home is not about modernity or sophistication or cult. It ia very much a necessity for a healthy outlook to your own life... #ULstory #Happysouls",
     },
     {
-      id: "1",
+      id: "5",
       img: "Images/CustomersInfo/img3.jpg",
       customerName: "Alexandra Book Shelf",
       customerComment:
         "having beautiful furniture in your home is not about modernity or sophistication or cult. It ia very much a necessity for a healthy outlook to your own life... #ULstory #Happysouls",
     },
     {
-      id: "2",
+      id: "6",
       img: "Images/CustomersInfo/img3.jpg",
       customerName: "Alexandra Book Shelf",
       customerComment:
         "having beautiful furniture in your home is not about modernity or sophistication or cult. It ia very much a necessity for a healthy outlook to your own life... #ULstory #Happysouls",
     },
     {
-      id: "1",
+      id: "7",
       img: "Images/CustomersInfo/img3.jpg",
       customerName: "Alexandra Book Shelf",
       customerComment:
         "having beautiful furniture in your home is not about modernity or sophistication or cult. It ia very much a necessity for a healthy outlook to your own life... #ULstory #Happysouls",
     },
     {
-      id: "1",
+      id: "8",
       img: "Images/CustomersInfo/img3.jpg",
       customerName: "Alexandra Book Shelf",
       customerComment:
         "having beautiful furniture in your home is not about modernity or sophistication or cult. It ia very much a necessity for a healthy outlook to your own life... #ULstory #Happysouls",
     },
     {
-      id: "1",
+      id: "9",
       img: "Images/CustomersInfo/img3.jpg",
       customerName: "Alexandra Book Shelf",
       customerComment:
@@ -71,7 +71,7 @@ export const CustomersReview = () => {
   ];
   return (
     <div className="w-full h-full ">
-      <div className="flex justify-center mt-5 font-bold text-2xl ">
+      <div className="flex justify-center mb-10 font-bold text-2xl ">
         <h1 className="text-gray-600">
           Our Customers <span className="text-orange-500">Reviews</span>{" "}
         </h1>
@@ -79,25 +79,31 @@ export const CustomersReview = () => {
       {CustomerInfo.map((item, index) => (
         <Fragment key={item.id}>
           {index === images && (
-            <div className=" flex justify-center items-center">
-              <div className=" w-[700px]  items-center mt-40 border border-gray-100 bg-gray-100 rounded-lg shadow-md shadow-black/30  pt-10 pb-40 mb-40">
-                <div className="flex justify-center">
-                  <figure className="w-[130px] h-[120px] my-5">
-                    <img
-                      src="/Images/dp.jpeg"
-                      className="w-full h-full rounded-full"
-                    />
+            <div className="flex justify-center items-center">
+              <div className="w-1/4 items-center border border-gray-100 bg-gray-100 rounded-lg shadow-md shadow-black/30">
+                <div className="flex">
+                  <div className="flex justify-center mt-5">
+                    <figure className="w-1/5 h-3/4 ">
+                      <img
+                        src="/Images/dp.jpeg"
+                        className="w-full h-full rounded-full"
+                      />
+                    </figure>
+                  </div>
+                </div>
+                <div className="w-full flex justify-center">
+                  <figure className="w-4/5">
+                    <img src={item.img} className="w-full h-full" />
                   </figure>
                 </div>
 
-                <div className="flex justify-center ">
-                  <figure className="w-[500px] h-[300px] ">
-                    <img src={item.img} className="w-full h-full" />
-                    <p className="flex justify-center  mt-5 mb-5 text-[14px] tracking-wide text-black/70 font-bold">
-                      {item.customerName}
-                    </p>
-                    <p className="text-[12px] font-semibold text-gray-500">{item.customerComment}</p>
-                  </figure>
+                <p className="flex justify-center  mt-5 mb-5 text-[14px] tracking-wide text-black/70 font-bold">
+                  {item.customerName}
+                </p>
+                <div className="flex justify-center w-full">
+                  <p className="text-sm pb-10 w-3/4 flex justify-center text-center text-gray-500">
+                    {item.customerComment}
+                  </p>
                 </div>
               </div>
             </div>

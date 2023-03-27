@@ -7,14 +7,13 @@ import { Contact } from "./Components/MyPages/Contact";
 import { Categories } from "./Components/MyPages/Categories";
 import { Products } from "./Components/MyPages/Products";
 import { DisplayDetails } from "./Components/MyPages/DisplayDetails";
-import { Footer } from "./Components/MyPages/Footer";
 
 const App = () => {
   return (
     <div>
       <NavArea />
 
-      <div className="overflow-x-hidden">
+      <div className="overflow-hidden">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
@@ -24,7 +23,6 @@ const App = () => {
           <Route path="/:details" element={<DisplayDetails />}></Route>
         </Routes>
       </div>
-      <Footer />
     </div>
   );
 };

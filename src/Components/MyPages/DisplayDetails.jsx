@@ -7,18 +7,17 @@ export const DisplayDetails = () => {
   console.log(productSamples[1].id === details);
 
   return (
-    <div className="absolute bg-white w-full h-full overflow-x-hidden">
+    <div className="w-full h-full ">
       {productSamples
         .filter((item) => item.id === details)
         .map((item) => (
           <Fragment key={item.id}>
-            <h1 className="mt-40 text-3xl flex justify-center py-10 mb-10 font-bold text-black/70">
+            <h1 className="mt-[5%] text-3xl flex  justify-center py-10 mb-10 font-bold text-black/70">
               {item.name}{" "}
             </h1>
-            <div className=" w-full h-full flex mx-10 justify-around ">
-              <div className=" w-4/4">
-                {" "}
-                <figure className=" w-full flex ">
+            <div className=" w-full h-full  flex items-center mx-20 justify-around ">
+              <div>
+                <figure className=" w-4/4 h-4/4 flex ">
                   <img src={item.img} className="h-full w-full " />
                 </figure>
               </div>
