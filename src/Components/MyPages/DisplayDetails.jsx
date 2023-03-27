@@ -34,7 +34,7 @@ export const DisplayDetails = () => {
                     {" "}
                     WuuStore{" "}
                     <span className="text-black/70 font-semibold text-md ">
-                      will always listen you
+                      will always listen to you
                     </span>
                   </h3>
                   <div className="flex justify-center">
